@@ -12,6 +12,11 @@ namespace Linqproblem
         {
             List<string> thList = list.Where(t => t.Contains("th")).ToList();
             return thList;
+                   }
+        public List<string> GetStringNotDuplicate(List<string> list)
+        {
+            List<string> dupList = list.Distinct().ToList();
+            return dupList;
         }
     }
 }
