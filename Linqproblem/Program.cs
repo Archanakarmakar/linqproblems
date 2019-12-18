@@ -25,7 +25,33 @@ namespace Linqproblem
             List<string> depWordSearch;
             newwords = GetStringNotDuplicate;
             depWordSearch = newwords(depWord);
+
+            List<string> classGrades = new List<string>()
+            {
+                "80,100,92,89,65",
+                "93,81,78,84,69",
+                "73,88,83,99,64",
+                "98,100,66,74,55"
+            };
             Console.ReadLine();
+        }
+        public static int Average(List<string> list) 
+        {
+            List<int> averages = new List<int>;
+            for (int i = 0; i < list.Count; i++)
+            {
+                string t = list[i];
+                foreach (char c in t)
+                {
+                    int o = 0;
+                    int.TryParse(c.ToString(), out o);
+                    if (o > 0 && o <= 100)
+                        averages.Add(o);
+                }
+                ;
+            }
+           
+            return 5;
         }
         public static List<string> ReturnSubstringFromList(List<string> list)
         {
