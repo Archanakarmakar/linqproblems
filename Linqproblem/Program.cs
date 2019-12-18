@@ -47,7 +47,7 @@ namespace Linqproblem
         for (int i = 0; i < list.Count; i++)
         {
            num =  list[i].Split(',').Select(n=>int.Parse(n)).OrderByDescending(n=>n).ToList();
-                num.RemoveAt(4);
+                num.RemoveAt(num.Count-1);
                 num2.Add(num.Average());
         }
             return num2.Average();
