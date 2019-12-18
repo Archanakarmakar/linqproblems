@@ -20,7 +20,7 @@ namespace Linqproblem
         }
         public void GetStringOfLetters()
         {
-            string input = Console.ReadLine();
+            string input = "Terrill";
             var result1 = input.ToUpper().ToArray().OrderBy(x => x);        //To Arry, OrderBy
             var result2 = result1.GroupBy(x => x).Select(x => $"{x.Last()}{x.Count()}");                //GroupBy and Count
             string result = "";
